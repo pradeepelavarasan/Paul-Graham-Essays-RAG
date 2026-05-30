@@ -37,7 +37,7 @@ The orchestrator loop (`agent7.py`) repeats 4 steps:
 
 
 This is a sample file format of a single essay.
-- **Link:** [Paul Graham Essays folder](file:///Users/pradeep/Library/CloudStorage/OneDrive-Personal/ML/2026%20ML%20Projects/EAG%20Session7%20RAG/Queries%20and%20Logs/Paul%20Graham%20Essays)
+- **Link:** [Paul Graham Essays folder](https://github.com/pradeepelavarasan/Paul-Graham-Essays-RAG/tree/main/Queries%20and%20Logs/Paul%20Graham%20Essays)
 
 ```json
 {
