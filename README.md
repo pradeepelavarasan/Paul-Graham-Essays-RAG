@@ -28,10 +28,11 @@ The workflow consists of a **One-Time Setup Phase** and an active **Runtime User
 
 #### 2. Runtime Phase (User Query Flow)
 The orchestrator loop (`agent7.py`) repeats 4 steps:
-1. **Memory Read (`memory.py`)**: Runs `read(query, history)` using the vector index. Falls back to token set-overlap search on `memory.json` if the vector index is offline.
+1. **Default Memory Check (`memory.py`)**: Runs a default memory check before processing any query, looking up facts via the vector index (or falling back to token set-overlap on `memory.json` if the index is offline) to populate initial context.
 2. **Perception (`perception.py`)**: Aligns memory hits with active goals and updates progress.
-3. **Decision (`decision.py`)**: Decides the next step (either tool calls or generating the final response).
-4. **Action (`action.py`)**: Executes the chosen tool and records the outcome (`record_outcome`) back to memory.
+3. **Decision (`decision.py`)**: Decides the next step (either generating the final response or executing tool calls). If further retrieval is needed, it calls the **`search_knowledge`** tool—which serves as the core RAG system function—to search the vector index database for relevant essay chunks.
+4. **Action (`action.py`)**: Executes the chosen tool (such as `search_knowledge`) and records the outcome (`record_outcome`) back to memory.
+
 
 ## Paul Graham RAG Query Samples
 
