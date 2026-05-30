@@ -1,0 +1,45 @@
+
+══════════════════════════════════════════════════════════════════════════════
+run 351d194a  ─  query: Across these papers, how do they handle the credit assignment problem?
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ○ g:cd206a18 — Query the existing knowledge base for how each paper handles the credit assignment problem
+[perception]    ○ g:02bcaf68 — Synthesise an answer regarding the credit assignment problem across the papers
+[decision]      TOOL_CALL: search_knowledge({"query": "how does each paper handle the credit assignment problem"})
+[action]        → {   "id": "mem:861a89c4",   "descriptor": "[sandbox:crawled_papers/cot.md chunk 1/1] # Title:Chain-of-Thought Prompting Elicits Reasoning in Large Language Models Abstract: We explore how generating a...
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:cd206a18 — Query the existing knowledge base for how each paper handles the credit assignment problem
+[perception]    ○ g:02bcaf68 — Synthesise an answer regarding the credit assignment problem across the papers  attach=art:14f78209681b4a4b
+[attach]        art:14f78209681b4a4b (6462 bytes)
+[decision]      TOOL_CALL: search_knowledge({"query": "how do the attention and lora papers handle the credit assignment problem?"})
+[action]        → {   "id": "mem:c14cc733",   "descriptor": "[sandbox:crawled_papers/react.md chunk 1/1] # Title:ReAct: Synergizing Reasoning and Acting in Language Models Abstract: While large language models (LLMs) h...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:cd206a18 — Query the existing knowledge base for how each paper handles the credit assignment problem
+[perception]    ○ g:02bcaf68 — Synthesise an answer regarding the credit assignment problem across the papers  attach=art:14f78209681b4a4b
+[attach]        art:14f78209681b4a4b (6462 bytes)
+[decision]      ANSWER: The credit assignment problem—the challenge of determining which specific actions or internal states contributed to a final outcome—is addressed differently across these papers, primarily by shifting ...
+
+─── iter 4 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:cd206a18 — Query the existing knowledge base for how each paper handles the credit assignment problem
+[perception]    ✓ g:02bcaf68 — Synthesise an answer regarding the credit assignment problem across the papers
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: The credit assignment problem—the challenge of determining which specific actions or internal states contributed to a final outcome—is addressed differently across these papers, primarily by shifting how models generate, verify, or optimize their outputs:
+
+*   **Chain-of-Thought (CoT) Prompting:** This paper addresses credit assignment by forcing the model to decompose complex problems into a series of intermediate reasoning steps. By generating a "chain of thought," the model makes its internal reasoning process explicit, which helps the model "assign credit" to individual logical steps rather than attempting to map an input directly to a final answer. This improves performance on arithmetic and symbolic tasks by breaking down the path to the solution.
+*   **ReAct (Reasoning and Acting):** ReAct extends the CoT approach by interleaving reasoning with external actions. It addresses the credit assignment problem by allowing the model to interface with external knowledge bases (like Wikipedia). This helps the model verify its own reasoning traces, effectively assigning credit to external evidence to correct hallucinations or errors that might occur in pure CoT. By grounding reasoning in external actions, it provides a more interpretable and reliable way to track how specific information leads to a final decision.
+*   **Direct Preference Optimization (DPO):** DPO approaches credit assignment from the perspective of alignment and reinforcement learning. Traditional RLHF (Reinforcement Learning from Human Feedback) struggles with credit assignment because it requires training a separate reward model and then using complex reinforcement learning to optimize the policy. DPO simplifies this by mathematically reparameterizing the reward model, allowing the model to optimize directly against human preferences using a simple classification loss. This bypasses the need for the complex, unstable credit assignment process inherent in PPO-based RLHF, making the alignment process more stable and computationally efficient.
+
+In summary, while CoT and ReAct focus on **procedural credit assignment** (improving the reasoning path itself), DPO focuses on **objective credit assignment** (simplifying how the model learns to value specific outputs based on human feedback).
+══════════════════════════════════════════════════════════════════════════════
+

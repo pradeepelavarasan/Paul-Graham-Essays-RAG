@@ -1,0 +1,38 @@
+
+══════════════════════════════════════════════════════════════════════════════
+run d86d5e43  ─  query: Why do some individuals develop an obsessive dislike or hatred toward famous people? Give a reference to the essay name and date as part of your answer.
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   7 hits
+[perception]    ○ g:257449ef — Query the existing knowledge base for psychological explanations of obsessive hatred toward famous people in Paul Graham's essay 'Haters'
+[perception]    ○ g:36c58282 — Synthesise an answer explaining the causes of hatred toward famous people using the 'Haters' essay by Paul Graham from January 2020
+[decision]      ANSWER: In his essay "Haters" (January 2020), Paul Graham offers a psychological perspective on why some individuals develop an obsessive hatred toward famous people. He posits that "haters are just fanboys w...
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   7 hits
+[perception]    ✓ g:257449ef — Query the existing knowledge base for psychological explanations of obsessive hatred toward famous people in Paul Graham's essay 'Haters'
+[perception]    ○ g:36c58282 — Synthesise an answer explaining the causes of hatred toward famous people using the 'Haters' essay by Paul Graham from January 2020
+[decision]      ANSWER: In his essay "Haters" (January 2020), Paul Graham explains that obsessive hatred toward famous people is essentially a mirror image of obsessive fandom. He posits that "haters are just fanboys with th...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   7 hits
+[perception]    ✓ g:257449ef — Query the existing knowledge base for psychological explanations of obsessive hatred toward famous people in Paul Graham's essay 'Haters'
+[perception]    ✓ g:36c58282 — Synthesise an answer explaining the causes of hatred toward famous people using the 'Haters' essay by Paul Graham from January 2020
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: In his essay "Haters" (January 2020), Paul Graham explains that obsessive hatred toward famous people is essentially a mirror image of obsessive fandom. He posits that "haters are just fanboys with the sign switched."
+
+According to Graham, the causes and characteristics of this behavior include:
+
+*   **Identity and Obsession:** For a hater, disliking a famous person becomes a core part of their identity. They create an exaggerated, negative mental image of the person that is far worse than reality, leading them to interpret everything the person does as bad.
+*   **Frustrated Talent:** Graham suggests that a primary driver for many haters is a sense of "frustrated talent." They are not merely annoyed by someone's fame; they are driven by the belief that it is unfair that the other person is famous while they are not.
+*   **The "Fraud" Narrative:** A hallmark of the hater is the need to label the famous person a "fraud." Because they cannot deny the person's fame, they reconcile the fame with their own intense dislike by convincing themselves that the person has tricked everyone.
+*   **Automatic Consequence of Fame:** Graham argues that haters, like fanboys, are an automatic byproduct of fame. The more famous someone becomes, the more they will inevitably attract this type of obsessive, long-term negative attention.
+
+Ultimately, Graham advises that because haters are driven by their own internal psychological needs rather than a legitimate dispute, they should not be treated as people with whom one can have a rational disagreement. Instead, the most effective approach is to avoid thinking about them entirely.
+══════════════════════════════════════════════════════════════════════════════
+

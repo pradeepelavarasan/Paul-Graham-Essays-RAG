@@ -1,0 +1,24 @@
+# secrets / env
+.env
+.env.*
+!.env.example
+llm_gatewayV7/.env
+
+# runtime state
+state/
+sandbox/
+usage.json
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# os
+.DS_Store
+
+test_embeddings/
+code/sandbox/pg\ essays\ raw/
+artifacts/
+code/artifacts/

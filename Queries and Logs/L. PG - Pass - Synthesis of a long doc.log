@@ -1,0 +1,37 @@
+
+══════════════════════════════════════════════════════════════════════════════
+run c2d6b4fc  ─  query: From all essays we have indexed summarize the top 3 tips related to writing. Give references to the essay names as part of your answer.
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   5 hits
+[perception]    ○ g:a38f87a5 — Query the existing knowledge base for writing tips across indexed essays
+[perception]    ○ g:c40a7ff2 — Summarize the top 3 writing tips with essay references
+[decision]      ANSWER: Based on the indexed essay "How to Write Usefully" by Paul Graham, here are three key writing tips:
+
+1.  **Use Yourself as a Proxy for the Reader:** To ensure your writing is both important and novel,...
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   5 hits
+[perception]    ✓ g:a38f87a5 — Query the existing knowledge base for writing tips across indexed essays
+[perception]    ○ g:c40a7ff2 — Summarize the top 3 writing tips with essay references
+[decision]      ANSWER: Based on the essay "How to Write Usefully" by Paul Graham, here are three key writing tips:
+
+1.  **Use Yourself as a Proxy for the Reader:** When choosing topics, write about things that seem importan...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   5 hits
+[perception]    ✓ g:a38f87a5 — Query the existing knowledge base for writing tips across indexed essays
+[perception]    ✓ g:c40a7ff2 — Summarize the top 3 writing tips with essay references
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: Based on the essay "How to Write Usefully" by Paul Graham, here are three key writing tips:
+
+1.  **Use Yourself as a Proxy for the Reader:** When choosing topics, write about things that seem important or surprising to you. Because you are not completely unlike your readers, if a topic matters to you or contains a novel insight you have discovered, it will likely be valuable to a significant number of readers as well.
+2.  **Practice Rigorous Proofreading:** Do not publish an essay until you can read through the entire piece without feeling that any part is "catching" or annoying. If a sentence feels clumsy or incorrect, take the time to ask why; you can often find the necessary replacement within your own head. Because you are not constrained by a journalist's deadline, you have the luxury of unlimited resources to get the writing right.
+3.  **Start Small and Focus on Expertise:** If you are struggling to start, relax the constraint on the number of people who care about your topic. Narrow your focus to something you are an expert on, even if only ten people care about it initially. Writing is a skill developed through practice, and you can expand the breadth of your topics as you gain experience.
+══════════════════════════════════════════════════════════════════════════════
+

@@ -1,0 +1,35 @@
+
+══════════════════════════════════════════════════════════════════════════════
+run 3be8af8d  ─  query: How do shy geeks show their teeth? Give a reference to the essay name and date as part of your answer.
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ○ g:04b7c3c4 — Query the existing knowledge base for the phrase shy geeks show their teeth
+[perception]    ○ g:defa79e0 — Synthesise an answer identifying how shy geeks show their teeth, including the essay name and date as a reference
+[decision]      TOOL_CALL: search_knowledge({"query": "shy geeks show their teeth"})
+[action]        → [artifact art:705e0a349447af96, 12581 bytes] preview: {   "id": "mem:06a7c256",   "descriptor": "[sandbox:Paul Graham Essays/Fierce Nerds.json chunk 2/4] most seem to be. You notice it first in conver...   +art:705e0a349447af96
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:04b7c3c4 — Query the existing knowledge base for the phrase shy geeks show their teeth
+[perception]    ○ g:defa79e0 — Synthesise an answer identifying how shy geeks show their teeth, including the essay name and date as a reference  attach=art:705e0a349447af96
+[attach]        art:705e0a349447af96 (12581 bytes)
+[decision]      ANSWER: The search results point to Paul Graham's essay **"Fierce Nerds"** (May 2021). In that essay, Graham explains that the apparent diffidence of nerds is an illusion — it only shows up in ordinary social...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:04b7c3c4 — Query the existing knowledge base for the phrase shy geeks show their teeth
+[perception]    ✓ g:defa79e0 — Synthesise an answer identifying how shy geeks show their teeth, including the essay name and date as a reference
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: The search results point to Paul Graham's essay **"Fierce Nerds"** (May 2021). In that essay, Graham explains that the apparent diffidence of nerds is an illusion — it only shows up in ordinary social situations where they are fish out of water. In reality, some nerds are quite fierce. He describes fierce nerds as extremely competitive, overconfident (especially when young), intelligent, independent-minded, and impatient. Their independent-mindedness is of the "aggressive rather than passive type: they'll be annoyed by rules, rather than dreamily unaware of them."
+
+So how do shy geeks show their teeth? They do it not in social settings but in their work: through intense competitiveness that takes results personally, through overconfidence that lets them tackle problems they only half-understand, through aggressive independent-mindedness that rejects arbitrary rules, and through an impatience that drives them to solve problems faster than anyone else. Graham's prime example is James Watson's *The Double Helix*, where both Francis Crick and Watson himself embody the fierce nerd — brilliant, socially awkward, competitive, and propelled by those very traits to beat two other research groups to the structure of DNA.
+
+**Reference:** Paul Graham, "Fierce Nerds," May 2021 (http://www.paulgraham.com/fn.html).
+══════════════════════════════════════════════════════════════════════════════
+

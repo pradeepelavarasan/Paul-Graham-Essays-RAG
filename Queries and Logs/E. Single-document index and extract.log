@@ -1,0 +1,55 @@
+
+══════════════════════════════════════════════════════════════════════════════
+run 3d57c5d7  ─  query: Index the file crawled_papers/attention.md and tell me what the three key contributions of the Transformer architecture are according to this paper.
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   1 hits
+[perception]    ○ g:fea66f0a — Make the content of crawled_papers/attention.md searchable
+[perception]    ○ g:cb0ebe02 — Query the knowledge base to extract the three key contributions of the Transformer architecture
+[perception]    ○ g:08b25309 — Summarise the three key contributions of the Transformer architecture
+[decision]      TOOL_CALL: index_document({"path": "crawled_papers/attention.md"})
+[action]        → {   "path": "crawled_papers/attention.md",   "source": "sandbox:crawled_papers/attention.md",   "chunks_indexed": 1,   "chunk_size": 400,   "overlap": 80 }
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   3 hits
+[perception]    ✓ g:fea66f0a — Make the content of crawled_papers/attention.md searchable
+[perception]    ○ g:cb0ebe02 — Query the knowledge base to extract the three key contributions of the Transformer architecture
+[perception]    ○ g:08b25309 — Summarise the three key contributions of the Transformer architecture
+[decision]      TOOL_CALL: search_knowledge({"query": "three key contributions of the Transformer architecture"})
+[action]        → {   "id": "mem:279e2da3",   "descriptor": "[sandbox:crawled_papers/attention.md chunk 1/1] # Title:Attention Is All You Need Abstract: The dominant sequence transduction models are based on complex re...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   4 hits
+[perception]    ✓ g:fea66f0a — Make the content of crawled_papers/attention.md searchable
+[perception]    ○ g:cb0ebe02 — Query the knowledge base to extract the three key contributions of the Transformer architecture
+[perception]    ○ g:08b25309 — Summarise the three key contributions of the Transformer architecture
+[decision]      ANSWER: The user wants to extract the three key contributions of the Transformer architecture from the knowledge base.
+I have memory hits from `search_knowledge` and `index_document` for the paper "Attention ...
+
+─── iter 4 ─────────────────────────────────────────────
+[memory.read]   4 hits
+[perception]    ✓ g:fea66f0a — Make the content of crawled_papers/attention.md searchable
+[perception]    ✓ g:cb0ebe02 — Query the knowledge base to extract the three key contributions of the Transformer architecture
+[perception]    ○ g:08b25309 — Summarise the three key contributions of the Transformer architecture
+[decision]      ANSWER: The Transformer architecture, as introduced in the paper "Attention Is All You Need," provides three primary contributions that distinguish it from previous sequence transduction models:
+
+1.  **Relian...
+
+─── iter 5 ─────────────────────────────────────────────
+[memory.read]   4 hits
+[perception]    ✓ g:fea66f0a — Make the content of crawled_papers/attention.md searchable
+[perception]    ✓ g:cb0ebe02 — Query the knowledge base to extract the three key contributions of the Transformer architecture
+[perception]    ✓ g:08b25309 — Summarise the three key contributions of the Transformer architecture
+
+[done] all 3 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: The Transformer architecture, as introduced in the paper "Attention Is All You Need," provides three primary contributions that distinguish it from previous sequence transduction models:
+
+1.  **Reliance Solely on Attention Mechanisms:** Unlike previous models that relied on complex recurrent (RNNs) or convolutional neural networks (CNNs), the Transformer dispenses with recurrence and convolutions entirely, utilizing attention mechanisms as its core building block.
+2.  **Increased Parallelization:** By removing the sequential nature of recurrent models, the Transformer architecture is significantly more parallelizable during training, allowing for more efficient use of computational resources.
+3.  **Improved Training Efficiency and Quality:** The architecture achieves superior translation quality compared to previous state-of-the-art models while requiring significantly less time to train.
+══════════════════════════════════════════════════════════════════════════════
+

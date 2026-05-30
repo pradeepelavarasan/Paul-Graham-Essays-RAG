@@ -1,0 +1,37 @@
+
+══════════════════════════════════════════════════════════════════════════════
+run ebe706d0  ─  query: From all essays we have indexed choose any 2 essays related to startup survival and summarize them. Give references to the essay names as part of your answer.
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   6 hits
+[perception]    ○ g:cae50138 — Query the existing knowledge base for essays related to startup survival.
+[perception]    ○ g:f5623173 — Summarize two selected essays on startup survival, referencing their titles.
+[decision]      ANSWER: Based on the knowledge base, the following essays and excerpts provide insights into startup survival:
+
+*   **"What Startups Are Really Like"**: This essay is particularly relevant to startup survival...
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   6 hits
+[perception]    ✓ g:cae50138 — Query the existing knowledge base for essays related to startup survival.
+[perception]    ○ g:f5623173 — Summarize two selected essays on startup survival, referencing their titles.
+[decision]      ANSWER: Based on the provided essays, here is a summary of insights regarding startup survival:
+
+*   **"What Startups Are Really Like"**: This essay emphasizes that persistence is significantly more important...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   6 hits
+[perception]    ✓ g:cae50138 — Query the existing knowledge base for essays related to startup survival.
+[perception]    ✓ g:f5623173 — Summarize two selected essays on startup survival, referencing their titles.
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: Based on the provided essays, here is a summary of insights regarding startup survival:
+
+*   **"What Startups Are Really Like"**: This essay emphasizes that persistence is significantly more important than raw intelligence for startup founders. Because everything in a startup takes longer than expected, founders must possess high levels of character and commitment. A key takeaway is the importance of choosing cofounders carefully; founders frequently cited that character and commitment—rather than just ability—are the most critical factors in a successful partnership, and that failing to vet these traits often leads to startup failure.
+
+*   **"What I Worked On"**: This essay highlights how the landscape of startups has shifted due to changing economic constraints. Historically, startups were expensive and rare, leading to rigid venture capital customs that persisted even after the cost of starting a company dropped. The author argues that independent-minded individuals who are not constrained by these obsolete customs have a distinct advantage in fields undergoing rapid change. Furthermore, the essay notes that the purpose of organizations like Y Combinator is to challenge the assumption that the number of new startups is fixed, actively working to foster the creation of companies that otherwise would not have existed.
+══════════════════════════════════════════════════════════════════════════════
+
