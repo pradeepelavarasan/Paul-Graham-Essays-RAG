@@ -34,11 +34,9 @@ The orchestrator loop (`agent7.py`) repeats 4 steps:
 - **Number of essay files:** 50
 - **Total indexed chunks:** 282
 - **Data folder:** `Queries and Logs/Paul Graham Essays/`
-
-
-This is a sample file format of a single essay.
 - **Link:** [Paul Graham Essays folder](https://github.com/pradeepelavarasan/Paul-Graham-Essays-RAG/tree/main/Queries%20and%20Logs/Paul%20Graham%20Essays)
 
+This is a sample file format of a single essay.
 ```json
 {
   "title": "Alien Truth",
