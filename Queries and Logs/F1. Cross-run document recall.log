@@ -16,8 +16,8 @@ run f6acae29  ─  query: Index every .md file under crawled_papers/. Confirm ho
 [memory.read]   5 hits
 [perception]    ○ g:14459abd — List all .md files in the crawled_papers/ directory.
 [perception]    ✓ g:789dae81 — Make the content of crawled_papers/attention.md searchable.
-[perception]    ○ g:7244a321 — Make the content of crawled_papers/cot.md searchable.
-[perception]    ○ g:fca84a32 — Make the content of crawled_papers/dpo.md searchable.
+[perception]    ○ g:7244a321 — Make the contente of crawled_papers/cot.md searchable.
+[perception]    ○ g:fca84a32 — Make the content of crawled_papers/dpo.md sarchable.
 [perception]    ○ g:2af7c397 — Make the content of crawled_papers/lora.md searchable.
 [perception]    ○ g:c4abcef1 — Make the content of crawled_papers/react.md searchable.
 [decision]      ANSWER: The user wants a list of all `.md` files in the `crawled_papers/` directory.
