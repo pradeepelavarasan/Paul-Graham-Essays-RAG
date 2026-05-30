@@ -5,9 +5,7 @@ An agentic Retrieval-Augmented Generation (RAG) system built around the collecti
 Throughout the implementation, we addressed core RAG failure modes, specifically analyzing how raw hyperlinked content and metadata degrade semantic mapping performance. By preprocessing and cleaning the raw research documents before re-indexing, we drastically improved semantic mapping quality. The resulting setup allows the LLM agent to perform precise semantic retrievals, conceptual synonym mappings, and dynamic multi-document synthesis directly from its indexed memory layer using `nomic embeddings.
 
 
-
-> [!TIP]
-> **Demo Video**: Watch the RAG tool in action, showcasing semantic searches and grace under error conditions: [YouTube Demo Link (Coming Soon)](#)
+> **Demo Video**: Watch the RAG tool in action, showcasing semantic searches: [YouTube Demo Link](https://youtu.be/vPosAeuZ4Pc)
 
 ---
 
@@ -32,6 +30,25 @@ The orchestrator loop (`agent7.py`) repeats 4 steps:
 2. **Perception (`perception.py`)**: Aligns memory hits with active goals and updates progress.
 3. **Decision (`decision.py`)**: Decides the next step (either generating the final response or executing tool calls). If further retrieval is needed, it calls the **`search_knowledge`** tool—which serves as the core RAG system function—to search the vector index database for relevant essay chunks.
 4. **Action (`action.py`)**: Executes the chosen tool (such as `search_knowledge`) and records the outcome (`record_outcome`) back to memory.
+
+### Paul Graham Essay Manifest
+
+- **Number of essay files:** 50
+- **Total indexed chunks:** 282
+- **Data folder:** `Queries and Logs/Paul Graham Essays/`
+
+
+This is a sample file format of a single essay.
+- **Link:** [Paul Graham Essays folder](file:///Users/pradeep/Library/CloudStorage/OneDrive-Personal/ML/2026%20ML%20Projects/EAG%20Session7%20RAG/Queries%20and%20Logs/Paul%20Graham%20Essays)
+
+```json
+{
+  "title": "Alien Truth",
+  "link": "http://www.paulgraham.com/alien.html",
+  "date": "October 2022",
+  "content": "If there were intelligent beings elsewhere in the universe, they'd share certain truths in common  ......"
+}
+```
 
 
 ## Paul Graham RAG Query Samples
